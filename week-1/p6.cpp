@@ -1,22 +1,27 @@
-#include<iostream>
+i need to work on this question
+/*#include<iostream>
 using namespace std;
 int main()
 {
-    int n,a[100];
+    int n,a[100],x1=0,x2=0,x3=0,x4=0;
     cin>>n;
     for(int i=0;i<n;i++)
     {
         cin>>a[i];
     }
-    int m=0,c,b;
-    for(int i=0;i<n-1;i++)
+    for(int i=0;i<n;i++)
     {
-        for(int j=i+1;j<n;j++)
-        {
-            if((a[i]^a[j])>m){
-                m=a[i]^a[j];
-                b=i;c=j;}
-        }
+        x1+=a[i]&1;cout<<x1<<" ";
+        a[i]<<1;
+        x2+=a[i]&1;cout<<x2<<" ";a[i]<<1;
+        x3+=a[i]&1;cout<<x3<<" ";
+
     }
-    cout<<a[b]<<"^"<<a[c]<<"="<<m;
-}
+    cout<<x1<<" "<<x2<<" "<<x3<<" "<<x4<<"\n";
+    x1=x1%3;
+    x2=x2%3;
+    x3=x3%3;
+
+    cout<<x1+(x2*2)+(x3*4);
+
+}*/
