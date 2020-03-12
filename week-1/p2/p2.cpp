@@ -2,6 +2,7 @@
 using namespace std;
 int main()
 {
+    while(1){
     int a,b,c,cu=0,m,n,o;
     cin>>a>>b>>c;
     while(a!=0 || b!=0 || c!=0)
@@ -17,4 +18,6 @@ int main()
             cu+=2;
     }
     cout<<cu;
+    cout<<"\n";
+    }
 }

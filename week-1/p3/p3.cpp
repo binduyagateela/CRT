@@ -1,8 +1,8 @@
-
 #include<iostream>
 using namespace std;
 int main()
 {
+    while(1){
     int n,a[100];
     cin>>n;
     for(int i=0;i<n;i++)
@@ -20,5 +20,8 @@ int main()
                 b=i;c=j;}
         }
     }
-    cout<<a[b]<<"^"<<a[c]<<"="<<m;
+   cout<<a[b]<<"^"<<a[c]<<"="<<m<<"\n";
+  //cout<<m;
+    cout<<"\n";
+    }
 }

@@ -17,6 +17,7 @@ void fun(int l,int h,int a[])
 }
 int main()
 {
+    while(1){
     int n,a[100],n1,q[100][2];
     cin>>n;
     for(int i=0;i<n;i++)
@@ -31,6 +32,8 @@ int main()
     }
     for(int i=0;i<n1;i++)
     {
-        fun(q[i][0],q[i][1],mi,a);
+        fun(q[i][0],q[i][1],a);
     }
+    cout<<"\n";
+}
 }
