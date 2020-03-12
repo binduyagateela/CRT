@@ -1,5 +1,4 @@
-i need to work on this question
-/*#include<iostream>
+#include<iostream>
 using namespace std;
 int main()
 {
@@ -11,17 +10,18 @@ int main()
     }
     for(int i=0;i<n;i++)
     {
-        x1+=a[i]&1;cout<<x1<<" ";
-        a[i]<<1;
-        x2+=a[i]&1;cout<<x2<<" ";a[i]<<1;
-        x3+=a[i]&1;cout<<x3<<" ";
-
+        x1=x1+(a[i]%2);
+        a[i]=a[i]/2;
+        x2=x2+(a[i]%2);
+        a[i]=a[i]/2;
+        x3=x3+(a[i]%2);
+        a[i]=a[i]/2;
+        x4=x4+(a[i]%2);
     }
-    cout<<x1<<" "<<x2<<" "<<x3<<" "<<x4<<"\n";
     x1=x1%3;
     x2=x2%3;
     x3=x3%3;
+    x4=x4%3;
+    cout<<(x1+(x2*2)+(x3*4)+(x4*8));
 
-    cout<<x1+(x2*2)+(x3*4);
-
-}*/
+}
