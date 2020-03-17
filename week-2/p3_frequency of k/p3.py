@@ -1,14 +1,37 @@
-def C(m,k):  
-    f={}
-    for i in m: 
-        if (i in f): 
-            f[i]+=1
-        else: 
-            f[i]=1
-    for key, value in f.items(): 
-        if(key==k):
-            print(value) 
+i=-1
+def findleft(l,left,right,mid,key):
+    global i
+    mid=(left+right)//2
+    if left>right:
+        return
+    if l[mid]==key:
+        i=mid
+    if l[mid]<key:
+        findleft(l,mid+1,right,mid,key)
+    else:
+        findleft(l,left,mid-1,mid,key)
+def findright(l,left,right,mid,key):
+    global i
+    mid=(left+right)//2
+    if left>right:
+        return
+    if l[mid]==key:
+        i=mid
+    if l[mid]<=key:
+        findright(l,mid+1,right,mid,key)
+    else:
+        findright(l,left,mid-1,mid,key)
 while True:
-    m=list(map(int,input().split()))
-    k=int(input())
-    C(m,k)
+    l=list(map(int,input().split()))
+    n=len(l)
+    l.sort()
+    key=int(input())
+    i=-1
+    findleft(l,0,n-1,-1,key)
+    a=i
+    i=-1
+    findright(l,0,n-1,-1,key)
+    if a==i==-1:
+        print(0)
+    else:
+        print(i-a+1)
