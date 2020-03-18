@@ -1,17 +1,21 @@
-def paren(left,right,string):
+c=0
+def solution(left,right,string):
+    global c
     if(left == 0 and right == 0):
         print(string)
+        c+=1
     if(left>right):
         return
     if (left > 0):
-        paren(left-1,right,string+"(")
+        solution(left-1,right,string+"(")
     if (right > 0):
-        paren(left,right-1,string+")")
-def par(n):
-    paren(n/2,n/2,"")
+        solution(left,right-1,string+")")
+def paranthesis(n):
+    solution(n/2,n/2,"")
 while True:
     n=int(input())
     if(n%2!=0):
         print("invalid number")
-    par(n)
+    paranthesis(n)
+    print(c)
     print("\n")
